@@ -1,3 +1,9 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+<div class="container-task">
+    <ul>
+        <li *ngFor="let task of tasks">
+            <app-task [task]="task"/>
+        </li>
+    </ul>
+</div>
+<button (click)="openForm()">ajouter une tâche</button>
+<ng-template #form></ng-template>

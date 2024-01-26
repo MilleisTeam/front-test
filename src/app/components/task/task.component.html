@@ -1,0 +1,10 @@
+<div class="container-task">
+	<div class="delete" (click)="delete()">
+		<button>supprimer</button>
+	</div>
+	<h2 class="title">{{task.name}}</h2>
+	<p class="description">{{task.description}}</p>
+	<p class="status">{{task.done}}</p>
+	<button (click)="openForm()">modifer</button>
+</div>
+<ng-template #form></ng-template>

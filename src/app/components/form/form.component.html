@@ -1,0 +1,25 @@
+<div class="actions">
+	<h2>{{action}}</h2>
+	<button class="close" (click)="closeForm()">fermer</button>
+</div>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+	<div>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" [(ngModel)]="task.name" required>
+	</div>
+
+	<div>
+		<label for="description">Description:</label>
+		<input type="text" id="description" name="description"
+		       [(ngModel)]="task.description" required>
+	</div>
+
+	<div>
+		<label>
+			<input type="checkbox" id="done" name="done"
+			       [(ngModel)]="task.done"> Done
+		</label>
+	</div>
+
+	<button class="submit" type="submit" [disabled]="!myForm.form.valid">Submit</button>
+</form>
